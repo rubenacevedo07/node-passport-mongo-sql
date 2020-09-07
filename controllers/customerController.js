@@ -19,7 +19,7 @@ controller.save = (req, res) => {
   req.getConnection((err, connection) => {
     const query = connection.query('INSERT INTO customer set ?', data, (err, customer) => {
       console.log(customer)
-      res.redirect('/');
+      res.redirect('/customers');
     })
   })
 };
