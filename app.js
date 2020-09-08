@@ -24,7 +24,7 @@ const db = require('./config/keys').mongoURI;
 mongoose
   .connect(
     db,
-    { useNewUrlParser: true ,useUnifiedTopology: true}
+    { useNewUrlParser: true }
   )
   .then(() => console.log('MongoDB Connected'))
   .catch(err => console.log(err));
@@ -49,11 +49,11 @@ app.use(
 // middlewares
 app.use(morgan('dev'));
 app.use(myConnection(mysql, {
-  host: 'localhost',
-  user: 'root',
-  password: '',
+  host: 'sql7.freesqldatabase.com',
+  user: 'sql7364494',
+  password: 'w7nD4REMsr',
   port: 3306,
-  database: 'crudnodejsmysql'
+  database: 'sql7364494'
 }, 'single'));
 app.use(express.urlencoded({extended: false}));
 /* */
